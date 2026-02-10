@@ -2,18 +2,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Script to complete level when player reaches finish with enough points
-// Author: [Your Name]
-// Attach this to a Finish Zone trigger object
-// Resource: Created for Unity obstacle course project
-
 public class LevelComplete : MonoBehaviour
 {
 	// Minimum score needed to complete level
 	public int requiredScore = 100;
-
-	// Which scene to load next (Scene 2)
-	public string nextSceneName = "Level2";
+	// Which scene to load next 
+	public string nextSceneName = "Leve2";
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -50,3 +44,4 @@ public class LevelComplete : MonoBehaviour
 		SceneManager.LoadScene(nextSceneName);
 	}
 }
+
