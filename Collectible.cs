@@ -10,7 +10,7 @@ public class Collectible : MonoBehaviour
 	// Called when player touches the collectible
 	void OnTriggerEnter(Collider other)
 	{
-		// Check if the object that touched us is the Player
+		// Check if the object that touched us is the Player 
 		if (other.CompareTag("Player"))
 		{
 			// Add points to the score
@@ -21,4 +21,5 @@ public class Collectible : MonoBehaviour
 		}
 	}
 }
+
 
