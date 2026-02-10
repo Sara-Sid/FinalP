@@ -3,23 +3,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-// Script to control player movement and jumping
-// Author: [Your Name]
-// Attach this to your Player object (capsule or cube)
-// Resource: Created for Unity obstacle course project
-
 public class PlayerMovement : MonoBehaviour
 {
 	// Movement speed
 	public float moveSpeed = 5f;
-
 	// Jump force
 	public float jumpForce = 20f;
-
-	// Reference to the Rigidbody component
 	private Rigidbody rb;
 
-	// Ground check variables
 	public bool isGrounded = true;
 	public Transform groundCheck;
 	public float groundDistance = 0.5f;
@@ -29,18 +20,16 @@ public class PlayerMovement : MonoBehaviour
 	{
 		// Get the Rigidbody component attached to this object
 		rb = GetComponent<Rigidbody>();
-		UnityEngine.Debug.Log("Goal: Collect 100 points!");
+		Debug.Log("Goal: Collect 100 points!");
 	}
 
 	void Update()
 	{
-		// Check if player is on the ground (only if groundCheck is assigned)
+		// Check if player is on the ground 
 		if (groundCheck != null)
 		{
-			isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+			isGrounded = Physics.CheckSphere
 		}
-
-		// Get input from WASD keys using GetKey (works with both input systems)
 		float moveX = 0f;
 		float moveZ = 0f;
 
@@ -61,4 +50,5 @@ public class PlayerMovement : MonoBehaviour
 			rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
 		}
 	}
+
 }
