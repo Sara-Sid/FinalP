@@ -4,7 +4,7 @@ public class CameraFollow : MonoBehaviour
 {
 	// The player object to follow
 	public Transform player;
-	// Offset distance from player
+	// Offset distance from player 
 	public Vector3 offset = new Vector3(0, 5, -8);
 	public float smoothSpeed = 0.125f;
 
@@ -20,3 +20,4 @@ public class CameraFollow : MonoBehaviour
 	}
 
 }
+
